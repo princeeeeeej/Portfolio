@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -83,24 +84,28 @@ export default function SelectedWork() {
                 {/* Right Column - Scrolling Projects */}
                 <div className="flex flex-col gap-40 ">
                     <div className="ml-[-6rem] relative z-10">
-                        <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="video1.png" alt="Video 1" />
+                        <Link href="https://board-nine-liard.vercel.app/">
+                            <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="Board.png" alt="Video 1" />
+                        </Link>
                         <div className="flex justify-between mt-3">
                             <div>
-                                <h1 className="text-[#A29E9A]">Modern Marketing Website</h1>
-                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">NURA</h1>
+                                <h1 className="text-[#A29E9A]">Real-Time Collaborative Whiteboard</h1>
+                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">Board</h1>
                             </div>
                             <div className="flex justify-end items-center gap-2">
                                 <button className="rounded-full px-2 py-1 border border-[#D1D1C7] text-[0.8rem]">DEVELOPMENT</button>
-                                <button className="rounded-full px-2 py-1 text-[#0B0B0A] bg-[#A29E9A] text-[0.8rem]">2025</button>
+                                <button className="rounded-full px-2 py-1 text-[#0B0B0A] bg-[#A29E9A] text-[0.8rem]">2026</button>
                             </div>
                         </div>
                     </div>
                     <div className="ml-[-6rem] relative z-20">
-                        <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="video2.png" alt="Video 2" />
+                        <Link href="https://ai-resume-analyzler.vercel.app/">
+                            <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="resume-analyzer.png" alt="Video 1" />
+                        </Link>
                         <div className="flex justify-between mt-3">
                             <div>
-                                <h1 className="text-[#A29E9A]">Modern Marketing Website</h1>
-                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">NURA</h1>
+                                <h1 className="text-[#A29E9A]">AI Resume Analyzer</h1>
+                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">Resumind</h1>
                             </div>
                             <div className="flex justify-end items-center gap-2">
                                 <button className="rounded-full px-2 py-1 border border-[#D1D1C7] text-[0.8rem]">DEVELOPMENT</button>
@@ -109,24 +114,28 @@ export default function SelectedWork() {
                         </div>
                     </div>
                     <div className="ml-[-6rem] relative z-30">
-                        <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="video3.png" alt="Video 3" />
+                        <Link href="https://code-to-image-two.vercel.app/">
+                            <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="codeToImage.png" alt="Video 1" />
+                        </Link>
                         <div className="flex justify-between mt-3">
                             <div>
-                                <h1 className="text-[#A29E9A]">Modern Marketing Website</h1>
-                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">NURA</h1>
+                                <h1 className="text-[#A29E9A]">Code Snippet Image Generator</h1>
+                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">CodeToImage</h1>
                             </div>
                             <div className="flex justify-end items-center gap-2">
                                 <button className="rounded-full px-2 py-1 border border-[#D1D1C7] text-[0.8rem]">DEVELOPMENT</button>
-                                <button className="rounded-full px-2 py-1 text-[#0B0B0A] bg-[#A29E9A] text-[0.8rem]">2025</button>
+                                <button className="rounded-full px-2 py-1 text-[#0B0B0A] bg-[#A29E9A] text-[0.8rem]">2026</button>
                             </div>
                         </div>
                     </div>
                     <div className="ml-[-6rem] relative z-40">
-                        <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="video4.png" alt="Video 4" />
+                        <Link href="https://github.com/princeeeeeej/AI-JobBoard">
+                            <img className="h-[50rem] w-[100%] rounded-2xl object-cover" src="video1.png" alt="Video 1" />
+                        </Link>
                         <div className="flex justify-between mt-3">
                             <div>
-                                <h1 className="text-[#A29E9A]">Modern Marketing Website</h1>
-                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">NURA</h1>
+                                <h1 className="text-[#A29E9A]">Smart Job Discovery Platform</h1>
+                                <h1 className="text-4xl text-[#D1D1C7] font-bold mt-1">ApplyFlow</h1>
                             </div>
                             <div className="flex justify-end items-center gap-2">
                                 <button className="rounded-full px-2 py-1 border border-[#D1D1C7] text-[0.8rem]">DEVELOPMENT</button>

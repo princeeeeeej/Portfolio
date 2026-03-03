@@ -33,19 +33,19 @@ export default function Footer() {
         const tl = gsap.timeline({ paused: true });
 
         tl.to(arrowDiv, {
-            scale: 0.9,                
+            scale: 0.85,                
             duration: 0.25,
             ease: "power3.out",
         }, 0)                          
             .to(".arrow-1", {
                 y: "-200%",
                 duration: 0.3,
-                ease: "power2.out",
+                ease: "power4.out",
             }, 0)
             .to(".arrow-2", {
                 top: "20",                    
                 duration: 0.3,
-                ease: "power2.out",
+                ease: "power4.out",
             }, 0);
 
         arrowDiv?.addEventListener("mouseenter", () => tl.play());
@@ -100,8 +100,8 @@ export default function Footer() {
                     </div>
                     <div>
                         <div className="cursor-pointer bg-[#BFBFB1] rounded-full p-5 overflow-hidden arrow-div relative">
-                            <img src="up-arrow.png" alt="up-arrow" height={30} width={30} className="arrow-1" />
-                            <img src="up-arrow.png" alt="up-arrow" height={30} width={30} className="arrow-2 absolute top-20" />
+                            <img src="up.png" alt="arrow-up" height={30} width={30} className="arrow-1" />
+                            <img src="up.png" alt="arrow-up" height={30} width={30} className="arrow-2 absolute top-30" />
                         </div>
                     </div>
                 </div>

@@ -37,7 +37,7 @@ const Mail: React.FC = () => {
         setResultMessage("Please wait...");
 
         const payload = {
-            access_key: process.env.ACCESS_KEY,
+            access_key: process.env.NEXT_PUBLIC_ACCESS_KEY,
             ...formData,
         };
 
