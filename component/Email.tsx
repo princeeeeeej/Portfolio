@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
     name: string;
@@ -18,13 +18,10 @@ const Mail: React.FC = () => {
     const [resultMessage, setResultMessage] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    /* ---------------- FORM HANDLERS ---------------- */
-
     const handleChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
-
         setFormData((prev) => ({
             ...prev,
             [name]: value,
@@ -68,67 +65,74 @@ const Mail: React.FC = () => {
     };
 
     return (
-        <div className="mx-10 bg-gradient-to-b from-[#22211E] to-[#3C3936] rounded-2xl flex flex-col items-center text-[#D1D1C7] relative">
+        <div className="bg-gradient-to-b from-[#22211E] to-[#3C3936] rounded-2xl flex flex-col items-center text-[#D1D1C7] relative
+            mx-[clamp(1.5rem,_3vw,_2.5rem)]
+            p-[clamp(1.25rem,_3vw,_2.5rem)]">
 
-            {/* Form Card (inner panel like Hello) */}
-            <div className="bg-gradient-to-b from-[#22211E] to-[#3C3936] rounded-2xl p-10 flex flex-col items-center w-full">
-                <h1
-                className="mb-5 text-3xl font-bold"
-            >
+            <h1 className="font-bold mb-[clamp(1rem,_2vw,_1.25rem)]
+                text-[clamp(1.25rem,_2vw_+_0.5rem,_1.875rem)]">
                 Say Hello.
             </h1>
-                <form className="space-y-6 w-full" onSubmit={handleSubmit}>
 
-                    {/* Name */}
-                    <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Your Name"
-                        className="rounded-2xl p-3 mb-10 border border-[#464643] bg-[#32302D] text-[#D1D1C7] w-full border-"
-                    />
+            <form className="w-full space-y-[clamp(1rem,_2vw,_1.5rem)]" onSubmit={handleSubmit}>
 
-                    {/* Email */}
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="Your Email"
-                        className="rounded-2xl p-3 mb-10 border border-[#464643] bg-[#32302D] text-[#D1D1C7] w-full"
-                    />
+                {/* Name */}
+                <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your Name"
+                    className="rounded-2xl border border-[#464643] bg-[#32302D] text-[#D1D1C7] w-full
+                        p-[clamp(0.65rem,_1.2vw,_0.75rem)]
+                        text-[clamp(0.85rem,_1vw,_1rem)]"
+                />
 
-                    {/* Message */}
-                    <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        placeholder="Your Message"
-                        className="rounded-2xl p-3 mb-10 border border-[#464643] bg-[#32302D] text-[#D1D1C7] resize-none w-full"
-                    />
+                {/* Email */}
+                <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your Email"
+                    className="rounded-2xl border border-[#464643] bg-[#32302D] text-[#D1D1C7] w-full
+                        p-[clamp(0.65rem,_1.2vw,_0.75rem)]
+                        text-[clamp(0.85rem,_1vw,_1rem)]"
+                />
 
-                    <button
-                        type="submit"
-                        disabled={isLoading}
-                        className="bg-white w-full text-black p-3 rounded-2xl font-semibold"
-                    >
-                        {isLoading ? "Sending..." : "Send Message"}
-                    </button>
+                {/* Message */}
+                <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    placeholder="Your Message"
+                    className="rounded-2xl border border-[#464643] bg-[#32302D] text-[#D1D1C7] resize-none w-full
+                        p-[clamp(0.65rem,_1.2vw,_0.75rem)]
+                        text-[clamp(0.85rem,_1vw,_1rem)]"
+                />
 
-                    {resultMessage && (
-                        <div className="text-center text-gray-300 mt-4">
-                            {resultMessage}
-                        </div>
-                    )}
-                </form>
-            </div>
+                <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="bg-white w-full text-black rounded-2xl font-semibold
+                        p-[clamp(0.65rem,_1.2vw,_0.75rem)]
+                        text-[clamp(0.9rem,_1vw,_1rem)]"
+                >
+                    {isLoading ? "Sending..." : "Send Message"}
+                </button>
+
+                {resultMessage && (
+                    <div className="text-center text-gray-300 mt-[clamp(0.5rem,_1vw,_1rem)]
+                        text-[clamp(0.85rem,_0.9vw,_1rem)]">
+                        {resultMessage}
+                    </div>
+                )}
+            </form>
         </div>
-
     );
 };
 
