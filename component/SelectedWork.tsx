@@ -16,7 +16,7 @@ export default function SelectedWork() {
 
   const tl = gsap.timeline({ paused: true });
 
-  
+
 
   useGSAP(
     () => {
@@ -60,15 +60,25 @@ export default function SelectedWork() {
 
   const projects = [
     {
-      href: "https://board-nine-liard.vercel.app/",
+      href: "https://github.com/princeeeeeej/SketchSync",
       img: "first.webp",
-      video: "board.mp4",
+      video: "sketchsync.mp4",
       videoWidth: "w-[70%]",
       subtitle: "Real-Time Collaborative Whiteboard",
-      title: "Board",
+      title: "SketchSync",
       year: "2026",
       z: "z-10",
       isFirst: true,
+    },
+    {
+      href: "https://github.com/princeeeeeej/Uptiq",
+      img: "fourth.webp",
+      video: "uptiq.mp4",
+      videoWidth: "w-[80%]",
+      subtitle: "Distributed Uptime Monitoring Platform",
+      title: "Uptiq",
+      year: "2026",
+      z: "z-40",
     },
     {
       href: "https://ai-resume-analyzler.vercel.app/",
@@ -90,16 +100,7 @@ export default function SelectedWork() {
       year: "2026",
       z: "z-30",
     },
-    {
-      href: "https://github.com/princeeeeeej/AI-JobBoard",
-      img: "fourth.webp",
-      video: "jobBoard.mp4",
-      videoWidth: "w-[80%]",
-      subtitle: "Smart Job Discovery Platform",
-      title: "ApplyFlow",
-      year: "2025",
-      z: "z-40",
-    },
+
   ];
 
   return (
